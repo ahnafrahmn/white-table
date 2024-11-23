@@ -1,0 +1,165 @@
+body, 
+.container{
+    background-color: black;
+    width: auto;
+    height: auto;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.heading,
+.topics,
+.footer,
+.credits{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+
+
+.heading{
+    height: 100vh;
+    width: auto;
+     
+}
+.heading>.title{
+    text-align: center;
+    color: white;
+    font-size: 12vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sub-title{
+    margin-top: 2vh;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+}
+
+
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+
+
+.topics{
+    height: auto;
+    background-color: inherit;
+}
+
+.topicBox{
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 96vw;
+    min-height: auto;
+    color: white;
+    border: 1px solid rgb(73, 73, 73);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@keyframes expand{
+    0%{
+        height: 80px;
+    }
+    10%{
+        height: 150px;
+    }
+    20%{
+        height: 190px;
+    }
+    30%{
+        height: 250px;
+    }
+    40%{
+        height: 300px;
+    }
+    50%{
+        height: 350px;
+    }
+    60%{
+        height: 420px;
+    }
+    70%{
+        height: 500px;
+    }
+    80%{
+        height: 600px;
+    }
+    90%{
+        height: 700px;
+    }
+    100%{
+        height: max-content;
+    }
+}
+
+.active{
+    behavior: smooth;
+    animation: expand 200ms ease;
+}
+
+.topicName{
+    font-size: 3vw;
+}
+.topicDetails{
+    padding-top: 50px;
+    font-size: 1.3vw;
+    display: block;
+}
+
+
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+
+
+.hr{
+    border: 2px solid white;
+    border-left: transparent;
+    border-right: transparent;
+    margin-top: 30vh;
+    height: 10px;
+    margin-bottom: 10vh;
+}
+
+
+.credits{
+    color: whitesmoke;
+    font-size: 2.5vh;
+    width: 95vw;
+    margin-bottom: 10vh;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+/* ========================================================================================================================================= */
+
+@media (max-width: 800px){
+
+    .heading>.title{
+        font-size: 17vw;
+    }
+
+    .topicBox{
+        border: 1px solid rgb(73, 73, 73);
+        width: 89vw;
+    }
+    .topicName{
+        font-size: 10vw;
+    }
+    .topicDetails{
+        font-size: 5vw;
+    }
+}
+
